@@ -76,8 +76,7 @@ class WikipediaLinksToPhilosophy
 
     unless link then
       # disambiguation page? try the first item in the list
-      link =
-        @page.root.css('.mw-content-ltr > ul > li > a[href^="/wiki/"]').first
+      link = @page.root.css('.mw-content-ltr > ul > li > a[href^="/wiki/"]').first
     end
 
     # convert a Nokogiri HTML element back to a mechanize link
